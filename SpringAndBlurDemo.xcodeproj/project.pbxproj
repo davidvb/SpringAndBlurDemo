@@ -14,13 +14,20 @@
 		2DA72802188B6B30002607E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72801188B6B30002607E8 /* main.m */; };
 		2DA72806188B6B30002607E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72805188B6B30002607E8 /* AppDelegate.m */; };
 		2DA72809188B6B30002607E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA72807188B6B30002607E8 /* Main.storyboard */; };
-		2DA7280C188B6B30002607E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7280B188B6B30002607E8 /* ViewController.m */; };
+		2DA7280C188B6B30002607E8 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7280B188B6B30002607E8 /* AppViewController.m */; };
 		2DA7280E188B6B30002607E8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7280D188B6B30002607E8 /* Images.xcassets */; };
 		2DA72815188B6B30002607E8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA72814188B6B30002607E8 /* XCTest.framework */; };
 		2DA72816188B6B30002607E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA727F5188B6B30002607E8 /* Foundation.framework */; };
 		2DA72817188B6B30002607E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA727F9188B6B30002607E8 /* UIKit.framework */; };
 		2DA7281F188B6B30002607E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7281D188B6B30002607E8 /* InfoPlist.strings */; };
 		2DA72821188B6B30002607E8 /* SpringAndBlurDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72820188B6B30002607E8 /* SpringAndBlurDemoTests.m */; };
+		2DA7282C188B6C01002607E8 /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7282B188B6C01002607E8 /* BlurViewController.m */; };
+		2DA72837188B6D24002607E8 /* PresentingSpringAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72832188B6D24002607E8 /* PresentingSpringAnimator.m */; };
+		2DA72838188B6D24002607E8 /* LinearDismissalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72834188B6D24002607E8 /* LinearDismissalAnimator.m */; };
+		2DA72839188B6D24002607E8 /* SpringTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72836188B6D24002607E8 /* SpringTransitioningDelegate.m */; };
+		2DA7283E188B7300002607E8 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7283C188B7300002607E8 /* ModalViewController.m */; };
+		2DA7283F188B7300002607E8 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7283D188B7300002607E8 /* ModalViewController.xib */; };
+		2DA72842188B760E002607E8 /* DynamicDismissalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA72841188B760E002607E8 /* DynamicDismissalAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +52,27 @@
 		2DA72804188B6B30002607E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DA72805188B6B30002607E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2DA72808188B6B30002607E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2DA7280A188B6B30002607E8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2DA7280B188B6B30002607E8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2DA7280A188B6B30002607E8 /* AppViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		2DA7280B188B6B30002607E8 /* AppViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		2DA7280D188B6B30002607E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2DA72813188B6B30002607E8 /* SpringAndBlurDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpringAndBlurDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DA72814188B6B30002607E8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2DA7281C188B6B30002607E8 /* SpringAndBlurDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpringAndBlurDemoTests-Info.plist"; sourceTree = "<group>"; };
 		2DA7281E188B6B30002607E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2DA72820188B6B30002607E8 /* SpringAndBlurDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpringAndBlurDemoTests.m; sourceTree = "<group>"; };
+		2DA7282A188B6C01002607E8 /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurViewController.h; sourceTree = "<group>"; };
+		2DA7282B188B6C01002607E8 /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
+		2DA72831188B6D24002607E8 /* PresentingSpringAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingSpringAnimator.h; sourceTree = "<group>"; };
+		2DA72832188B6D24002607E8 /* PresentingSpringAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingSpringAnimator.m; sourceTree = "<group>"; };
+		2DA72833188B6D24002607E8 /* LinearDismissalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearDismissalAnimator.h; sourceTree = "<group>"; };
+		2DA72834188B6D24002607E8 /* LinearDismissalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearDismissalAnimator.m; sourceTree = "<group>"; };
+		2DA72835188B6D24002607E8 /* SpringTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringTransitioningDelegate.h; sourceTree = "<group>"; };
+		2DA72836188B6D24002607E8 /* SpringTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringTransitioningDelegate.m; sourceTree = "<group>"; };
+		2DA7283B188B7300002607E8 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		2DA7283C188B7300002607E8 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		2DA7283D188B7300002607E8 /* ModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		2DA72840188B760E002607E8 /* DynamicDismissalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicDismissalAnimator.h; sourceTree = "<group>"; };
+		2DA72841188B760E002607E8 /* DynamicDismissalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicDismissalAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +132,11 @@
 		2DA727FB188B6B30002607E8 /* SpringAndBlurDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2DA7283A188B6D27002607E8 /* Animations */,
+				2DA7282D188B6C44002607E8 /* ViewControllers */,
 				2DA72804188B6B30002607E8 /* AppDelegate.h */,
 				2DA72805188B6B30002607E8 /* AppDelegate.m */,
 				2DA72807188B6B30002607E8 /* Main.storyboard */,
-				2DA7280A188B6B30002607E8 /* ViewController.h */,
-				2DA7280B188B6B30002607E8 /* ViewController.m */,
 				2DA7280D188B6B30002607E8 /* Images.xcassets */,
 				2DA727FC188B6B30002607E8 /* Supporting Files */,
 			);
@@ -150,6 +170,35 @@
 				2DA7281D188B6B30002607E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DA7282D188B6C44002607E8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA7280A188B6B30002607E8 /* AppViewController.h */,
+				2DA7280B188B6B30002607E8 /* AppViewController.m */,
+				2DA7282A188B6C01002607E8 /* BlurViewController.h */,
+				2DA7282B188B6C01002607E8 /* BlurViewController.m */,
+				2DA7283B188B7300002607E8 /* ModalViewController.h */,
+				2DA7283C188B7300002607E8 /* ModalViewController.m */,
+				2DA7283D188B7300002607E8 /* ModalViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2DA7283A188B6D27002607E8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				2DA72835188B6D24002607E8 /* SpringTransitioningDelegate.h */,
+				2DA72836188B6D24002607E8 /* SpringTransitioningDelegate.m */,
+				2DA72831188B6D24002607E8 /* PresentingSpringAnimator.h */,
+				2DA72832188B6D24002607E8 /* PresentingSpringAnimator.m */,
+				2DA72840188B760E002607E8 /* DynamicDismissalAnimator.h */,
+				2DA72841188B760E002607E8 /* DynamicDismissalAnimator.m */,
+				2DA72833188B6D24002607E8 /* LinearDismissalAnimator.h */,
+				2DA72834188B6D24002607E8 /* LinearDismissalAnimator.m */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA7283F188B7300002607E8 /* ModalViewController.xib in Resources */,
 				2DA7280E188B6B30002607E8 /* Images.xcassets in Resources */,
 				2DA72800188B6B30002607E8 /* InfoPlist.strings in Resources */,
 				2DA72809188B6B30002607E8 /* Main.storyboard in Resources */,
@@ -249,9 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA7280C188B6B30002607E8 /* ViewController.m in Sources */,
+				2DA7280C188B6B30002607E8 /* AppViewController.m in Sources */,
 				2DA72806188B6B30002607E8 /* AppDelegate.m in Sources */,
+				2DA72838188B6D24002607E8 /* LinearDismissalAnimator.m in Sources */,
 				2DA72802188B6B30002607E8 /* main.m in Sources */,
+				2DA7283E188B7300002607E8 /* ModalViewController.m in Sources */,
+				2DA72837188B6D24002607E8 /* PresentingSpringAnimator.m in Sources */,
+				2DA7282C188B6C01002607E8 /* BlurViewController.m in Sources */,
+				2DA72842188B760E002607E8 /* DynamicDismissalAnimator.m in Sources */,
+				2DA72839188B6D24002607E8 /* SpringTransitioningDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

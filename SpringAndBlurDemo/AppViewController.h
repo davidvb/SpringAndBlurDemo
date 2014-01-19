@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface AppViewController : UIViewController
+
+- (IBAction)fromTop:(id)sender;
+- (IBAction)fromLeft:(id)sender;
+- (IBAction)fromBottom:(id)sender;
+- (IBAction)fromRight:(id)sender;
 
 @end
