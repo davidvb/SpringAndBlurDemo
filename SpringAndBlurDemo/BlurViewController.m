@@ -24,6 +24,18 @@
     self.lenderBar = [[UINavigationBar alloc] initWithFrame:self.view.bounds];
     self.lenderBar.barStyle = UIBarStyleDefault;
     [self.view.layer insertSublayer:self.lenderBar.layer atIndex:0];
+    
+    UIInterpolatingMotionEffect *centerX = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    centerX.maximumRelativeValue = @20;
+    centerX.minimumRelativeValue = @-20;
+    
+    UIInterpolatingMotionEffect *centerY = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    centerY.maximumRelativeValue = @20;
+    centerY.minimumRelativeValue = @-20;
+    
+    UIMotionEffectGroup *effectGroup = [UIMotionEffectGroup new];
+    effectGroup.motionEffects = @[centerX, centerY];
+    [self.view addMotionEffect:effectGroup];
 }
 
 - (void)updateViewConstraints
