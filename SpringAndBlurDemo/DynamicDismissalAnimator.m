@@ -42,7 +42,11 @@
     [self.animator addBehavior:itemBehaviour];
     
     UIGravityBehavior *gravityBehaviour = [[UIGravityBehavior alloc] initWithItems:@[fromVC.view]];
-    gravityBehaviour.gravityDirection = CGVectorMake(0.0f, 3.0f);
+    
+
+    gravityBehaviour.gravityDirection = [self vectorForCurrentOrientation];
+    
+    
     gravityBehaviour.action = ^{
         if (!CGRectIntersectsRect(fromVC.view.frame, transitionContext.containerView.frame)) {
             [self.animator removeAllBehaviors];
@@ -51,6 +55,29 @@
     };
     
     [self.animator addBehavior:gravityBehaviour];
+}
+
+- (CGVector)vectorForCurrentOrientation
+{
+    CGVector vector;
+    switch([[UIDevice currentDevice] orientation]) {
+        case UIDeviceOrientationPortrait:
+            vector = CGVectorMake(0.0, 3.0f);
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            vector = CGVectorMake(-3.0, 0.0f);
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            vector = CGVectorMake(0.0, -3.0f);
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            vector = CGVectorMake(3.0f, 0.0f);
+            break;
+        default:
+            vector = CGVectorMake(0.0, 3.0f);
+            break;
+    }
+    return vector;
 }
 
 

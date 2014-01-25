@@ -35,7 +35,7 @@
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    PresentingSpringAnimator *animator = [[PresentingSpringAnimator alloc] initWithTransitioningDirection:self.transitioningDirection];
+    PresentingSpringAnimator *animator = [[PresentingSpringAnimator alloc] initWithTransitioningDirection:[self convertedTransitioningDirection]];
     return animator;
 }
 
@@ -43,9 +43,9 @@
 {
     id<UIViewControllerAnimatedTransitioning> animator;
     if (self.interactive)
-        animator = [[LinearDismissalAnimator alloc] initWithTransitioningDirection:self.transitioningDirection];
+        animator = [[LinearDismissalAnimator alloc] initWithTransitioningDirection:[self convertedTransitioningDirection]];
     else
-        animator = [[DynamicDismissalAnimator alloc] initWithTransitioningDirection:self.transitioningDirection];
+        animator = [[DynamicDismissalAnimator alloc] initWithTransitioningDirection:[self convertedTransitioningDirection]];
     return animator;
 }
 
@@ -95,16 +95,41 @@
 - (CGFloat)percentForTranslation:(CGPoint)translation inFrame:(CGRect)frame
 {
     CGFloat percent;
-    if (self.transitioningDirection & (TransitioningDirectionDown | TransitioningDirectionUp)) {
+    TransitioningDirection convertedDirection = [self convertedTransitioningDirection];
+    if (convertedDirection == TransitioningDirectionDown || convertedDirection == TransitioningDirectionUp) {
         percent = translation.y/CGRectGetHeight(frame);
     } else {
         percent = translation.x/CGRectGetWidth(frame);
     }
     
-    if (self.transitioningDirection & (TransitioningDirectionUp | TransitioningDirectionLeft))
+    if (convertedDirection == TransitioningDirectionUp || convertedDirection == TransitioningDirectionLeft)
         percent *= -1.0f;
     
     return percent;
+}
+
+- (TransitioningDirection)convertedTransitioningDirection
+{
+    TransitioningDirection direction;
+    switch([[UIDevice currentDevice] orientation]) {
+        case UIDeviceOrientationPortrait:
+            direction = self.transitioningDirection;
+            break;
+        case UIDeviceOrientationLandscapeLeft:
+            direction = (self.transitioningDirection + 3) % kTransitionDirectionCount;
+            break;
+        case UIDeviceOrientationPortraitUpsideDown:
+            direction = (self.transitioningDirection + 2) % kTransitionDirectionCount;
+            break;
+        case UIDeviceOrientationLandscapeRight:
+            direction = (self.transitioningDirection + 1) % kTransitionDirectionCount;
+            break;
+        default:
+            direction = self.transitioningDirection;
+            break;
+    }
+    
+    return direction;
 }
 
 @end

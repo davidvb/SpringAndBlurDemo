@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, TransitioningDirection) {
-    TransitioningDirectionUp = 1 << 0,
-    TransitioningDirectionLeft = 1 << 1,
-    TransitioningDirectionDown = 1 << 2,
-    TransitioningDirectionRight = 1 << 3
+    TransitioningDirectionUp = 0,
+    TransitioningDirectionLeft = 1,
+    TransitioningDirectionDown = 2,
+    TransitioningDirectionRight = 3
 };
+
+#define kTransitionDirectionCount 4
 
 @class SpringTransitioningDelegate;
 
